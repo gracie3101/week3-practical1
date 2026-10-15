@@ -4,10 +4,10 @@ let circleW = 40;
 let g, b;
 
 function setup() {
-    frameRate(30);
-    createCanvas(600, 400);
+    frameRate(16);
+     createCanvas(600, 400); 
     noStroke();
-    background(0);
+    background(255);
     g = random(10, 255);
     b = random(255);
 }
@@ -18,6 +18,6 @@ function draw() {
     if (circleX === width - circleW / 2) {
         circleY = (circleY + circleW) % height;
     }
-    circleX = circleX + circleW % width;
+    circleX = (circleX + circleW) % width;
     b = (b + 1) % 255;
 }
